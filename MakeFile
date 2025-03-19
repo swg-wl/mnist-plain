@@ -1,0 +1,12 @@
+TARGET = ./build/main
+CC = gcc
+CFLAGS = -O2 -I.
+SRCS = ./src/main.c
+
+all: $(TARGET)
+
+$(TARGET): $(SRCS)
+	$(CC) $(CFLAGS) $(SRCS) -o $(TARGET)
+
+run: $(TARGET)
+	./$(TARGET)
